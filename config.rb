@@ -5,6 +5,9 @@ activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
 
+# Pretty URLs
+activate :directory_indexes
+
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 
@@ -30,17 +33,22 @@ page '/*.txt', layout: false
 # Helpers
 # Methods defined in the helpers block are available in templates
 # https://middlemanapp.com/basics/helper-methods/
-
-# helpers do
-#   def some_helper
-#     'Helping'
-#   end
-# end
+require "lib/application_helper"
+helpers ApplicationHelper
 
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
-# configure :build do
-#   activate :minify_css
-#   activate :minify_javascript
-# end
+configure :development do
+  config[:host] = "http://localhost:4567"
+end
+
+configure :build do
+  config[:host] = "https://bastienrobert.fr"
+
+  activate :minify_html
+  activate :minify_css
+  activate :minify_javascript
+  activate :imageoptim
+  activate :gzip
+end
