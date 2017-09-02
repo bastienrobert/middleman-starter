@@ -7,6 +7,8 @@ end
 
 # Pretty URLs
 activate :directory_indexes
+# Localization
+activate :i18n, :mount_at_root => :fr
 
 # Layouts
 # https://middlemanapp.com/basics/layouts/
