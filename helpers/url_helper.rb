@@ -15,9 +15,9 @@ module URLHelper
 
     return link_to data.languages.send(lang.to_s),
     if lang === I18n.default_locale
-      config[:host] + '/' + current_URI
+      config[:host] + '/' + I18n.translate!("paths.#{current_page.data.title}", locale: lang)
     else
-      config[:host] + '/' + lang.to_s + '/' + current_URI
+      config[:host] + '/' + lang.to_s + '/' + I18n.translate!("paths.#{current_page.data.title}", locale: lang)
     end
   end
 

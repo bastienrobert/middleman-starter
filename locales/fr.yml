@@ -6,3 +6,6 @@ fr:
   titles:
     homepage: "Accueil"
     about: "A propos"
+
+  paths:
+    about: "a-propos"
