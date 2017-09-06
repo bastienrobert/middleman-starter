@@ -2,15 +2,11 @@
 en:
   hello: "Hello"
   about: "About"
-  wow: "WOW"
 
   titles:
     homepage: "Homepage"
     about: "About"
-    wow: "English"
 
   paths:
-    # Directories
-    test: "tah"
     # Paths
     about: "about"
