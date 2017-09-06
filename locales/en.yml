@@ -1,4 +1,8 @@
 ---
-en:
+en:  
   hello: "Hello"
   about: "About"
+
+  titles:
+    homepage: "Homepage"
+    about: "About"
