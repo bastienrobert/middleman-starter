@@ -40,6 +40,7 @@ Dir["helpers/*.rb"].each {|file| require file }
 helpers ApplicationHelper
 
 # Middleman i18n can't convert page URL to another language. This is the solution.
+require "lib/url_middleware"
 helpers URLHelper
 
 # Middleman fails to reload on helpers edit. This is the solution.
