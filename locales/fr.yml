@@ -2,10 +2,15 @@
 fr:
   hello: "Bonjour"
   about: "A propos"
+  wow: "WOUH"
 
   titles:
     homepage: "Accueil"
     about: "A propos"
+    wow: "Francais"
 
   paths:
+    # Directories
+    test: "toh"
+    # Paths
     about: "a-propos"
