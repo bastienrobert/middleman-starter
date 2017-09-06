@@ -33,15 +33,18 @@ page '/*.txt', layout: false
 # )
 
 # Helpers
+# Requires all helpers
+Dir["helpers/*.rb"].each {|file| require file }
 # Methods defined in the helpers block are available in templates
 # https://middlemanapp.com/basics/helper-methods/
-require "lib/application_helper"
-require "lib/url_helper"
 helpers ApplicationHelper
+
+# Middleman i18n can't convert page URL to another language. This is the solution.
 helpers URLHelper
 
 # Middleman fails to reload on helpers edit. This is the solution.
-Dir['lib/*'].each(&method(:load))
+Dir['helpers/*'].each(&method(:load))
+
 
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
