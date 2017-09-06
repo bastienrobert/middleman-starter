@@ -36,13 +36,19 @@ page '/*.txt', layout: false
 # Methods defined in the helpers block are available in templates
 # https://middlemanapp.com/basics/helper-methods/
 require "lib/application_helper"
+require "lib/url_helper"
 helpers ApplicationHelper
+helpers URLHelper
+
+# Middleman fails to reload on helpers edit. This is the solution.
+Dir['lib/*'].each(&method(:load))
 
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
 configure :development do
   config[:host] = "http://localhost:4567"
+  activate :livereload
 end
 
 configure :build do
