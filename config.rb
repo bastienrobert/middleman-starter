@@ -66,4 +66,5 @@ configure :build do
   activate :minify_javascript
   activate :imageoptim
   activate :gzip
+  activate :critical, :binary => '/usr/local/bin/critical'
 end

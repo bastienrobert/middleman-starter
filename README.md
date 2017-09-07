@@ -17,9 +17,16 @@ By default, :fr is the default_locale. It works with any other default locale or
 - **views :** really simple, call `<%= link_translate(:fr) %>` to translate in `:fr`, do the same with `:en` to translate in `:en`
 
 ## Build
-If you want to use `imageoptim` without `image_optim_pack`, please check the followings has already been installed (open your terminal and type) :
+If you want to use `critical gem`, you have to install `critical npm module` before with the following command :
+```
+npm install -g critical
+```
+
+Than, if you want to use `imageoptim` without `image_optim_pack`, please check the followings has already been installed (open your terminal and type) :
 
 ```
 brew install advancecomp gifsicle jhead jpegoptim jpeg optipng pngcrush pngquant jonof/kenutils/pngout
 npm install -g svgo
 ```
+
+Finally, run `middleman build` !
