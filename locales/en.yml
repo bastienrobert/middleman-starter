@@ -8,5 +8,7 @@ en:
     about: "About"
 
   paths:
+    # Directories
+
     # Paths
     about: "about"

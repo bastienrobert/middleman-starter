@@ -4,7 +4,29 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title><%= "Middleman Starter" + ' | ' + t("titles.#{current_page.data.title}") || "Middleman Starter | Holà" %></title>
+
+    <title><%= data.meta.title + " | " + t("titles.#{current_page.data.title}") ||
+    data.meta.title + " | Holà" %></title>
+    <meta name="description" content="<%= data.meta.description || t('descriptions.#{current_page.data.title}') %>">
+
+    <!-- Facebook Open Graph data -->
+    <meta property="og:title" content="<%= data.meta.title + ' | ' + t('titles.#{current_page.data.title}') ||
+    data.meta.title + ' | Holà' %>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="<%= config[:host] + '/' + current_page.url %>" />
+    <meta property="og:image" content="<%= data.meta.image %>" />
+    <meta property="og:description" content="<%= data.meta.description || t('descriptions.#{current_page.data.title}') %>" />
+    <meta property="og:site_name" content="<%= data.meta.title %>" />
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="<%= data.meta.twitter %>">
+    <meta name="twitter:title" content="<%= data.meta.title + ' | ' + t('titles.#{current_page.data.title}') ||
+    data.meta.title + ' | Holà' %>">
+    <meta name="twitter:description" content="<%= data.meta.description || t('descriptions.#{current_page.data.title}') %>">
+    <meta name="twitter:creator" content="<%= data.meta.twitter %>">
+    <meta name="twitter:image:src" content="<%= data.meta.image %>">
+
     <%= stylesheet_link_tag "application" %>
   </head>
   <body>
