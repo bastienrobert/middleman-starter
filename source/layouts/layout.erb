@@ -30,7 +30,9 @@
     <%= stylesheet_link_tag "application" %>
   </head>
   <body>
+    <%= partial 'layouts/partials/header' %>
     <%= yield %>
+    <%= partial 'layouts/partials/footer' %>
     <%= javascript_include_tag "application" %>
   </body>
 </html>
