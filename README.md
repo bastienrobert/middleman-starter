@@ -1,4 +1,7 @@
 # Middleman Starter
+[![Code Climate](https://codeclimate.com/github/bastienrobert/middleman-starter/badges/gpa.svg)](https://codeclimate.com/github/bastienrobert/middleman-starter)
+[![Known Vulnerabilities](https://snyk.io/test/github/bastienrobert/middleman-starter/badge.svg)](https://snyk.io/test/github/bastienrobert/middleman-starter)
+
 Starter for middleman, using i18n and including a URL helper to translate the same page in a different language.
 
 ## URL helper
