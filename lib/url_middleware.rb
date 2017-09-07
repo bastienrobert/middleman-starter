@@ -12,19 +12,18 @@ module URLHelper
       path_translate(lang) +
       title_translate(lang)
     end
-
-    def path_translate(lang)
-      begin
-        current_page.data.dir.map { |dir| t("paths.#{dir}", locale: lang, :default => dir) + '/'}.join('')
-      rescue
-        return ''
-      end
+  end
+  
+  def path_translate(lang)
+    begin
+      current_page.data.dir.map { |dir| t("paths.#{dir}", locale: lang, :default => dir) + '/'}.join('')
+    rescue
+      return ''
     end
+  end
 
-    def title_translate(lang)
-      t("paths.#{current_page.data.title}", locale: lang, :default => current_page.data.title)
-    end
-
+  def title_translate(lang)
+    t("paths.#{current_page.data.title}", locale: lang, :default => current_page.data.title)
   end
 
 end
