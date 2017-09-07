@@ -58,6 +58,7 @@ end
 configure :build do
   config[:host] = "https://bastienrobert.fr"
 
+  activate :sitemap, :gzip => false, :hostname => config[:host]
   activate :minify_html
   activate :minify_css
   activate :minify_javascript

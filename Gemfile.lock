@@ -1,4 +1,11 @@
 GIT
+  remote: https://github.com/bastienrobert/middleman-sitemap
+  revision: b52c2256d4188761122804cbb79ceb6cd1afdf6b
+  specs:
+    middleman-sitemap (0.0.13)
+      middleman-core (>= 3.2.2)
+
+GIT
   remote: https://github.com/plasticine/middleman-imageoptim
   revision: a539caef0d2f9a23704ed36cf36c7945d2282c62
   specs:
@@ -145,6 +152,7 @@ DEPENDENCIES
   middleman-imageoptim!
   middleman-livereload
   middleman-minify-html
+  middleman-sitemap!
   tzinfo-data
   wdm (~> 0.1)
 
