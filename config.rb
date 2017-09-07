@@ -9,6 +9,8 @@ end
 activate :directory_indexes
 # Localization
 activate :i18n, :mount_at_root => :fr
+# Using asset helpers
+activate :asset_hash
 
 # Layouts
 # https://middlemanapp.com/basics/layouts/
