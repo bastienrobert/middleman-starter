@@ -30,3 +30,9 @@ npm install -g svgo
 ```
 
 Finally, run `middleman build` !
+
+## Netlify
+You can setup this template on Netlify with the middleman-netlify template : https://github.com/bastienrobert/middleman-netlify
+
+## Todo (later)
+- When `middleman-robots` will be fixed, let'update it to '> 1.3.2' (1.3.2 is bugged)

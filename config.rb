@@ -19,6 +19,7 @@ activate :asset_hash
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
+page 'sitemap.xml', layout: false
 
 # With alternative layout
 # page '/path/to/file.html', layout: 'other_layout'
@@ -60,11 +61,19 @@ end
 configure :build do
   config[:host] = "https://bastienrobert.fr"
 
-  activate :sitemap, :gzip => false, :hostname => config[:host]
   activate :minify_html
   activate :minify_css
   activate :minify_javascript
   activate :imageoptim
   activate :gzip
   activate :critical, :binary => '/usr/local/bin/critical'
+
+  # SEO
+  activate :sitemap, :gzip => false, :hostname => config[:host]
+  # Robots
+  activate :robots,
+    :rules => [
+      {:user_agent => '*', :allow => %w(/)}
+    ],
+    :sitemap => config[:host] + "/sitemap.xml"
 end
