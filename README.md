@@ -6,7 +6,7 @@ To translate the same page in a different language.
 By default, :fr is the default_locale. It works with any other default locale or within it. These are the steps to setup :
 
 - **config.rb :** precise your default_locale in mount_as_root
-- **locales *.yml :** for each locale, precise :
+- __locales **.yml :__ for each locale, precise :
   - the title _title_ of the page (identifier)
   - the title translation : in locale.titles
   - subdirectories _dir_ in a list (URL direction)
