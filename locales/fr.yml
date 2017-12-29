@@ -1,14 +1,21 @@
 ---
 fr:
-  hello: "Bonjour"
-  about: "A propos"
-
+  # ------------------
+  # Root translations
+  # ------------------
   titles:
     homepage: "Accueil"
     about: "A propos"
 
   paths:
-    # Directories
-
-    # Paths
+    homepage: ''
     about: "a-propos"
+
+  # ------------------
+  # Page translations
+  # ------------------
+  homepage:
+    h1: "Bonjour"
+
+  about:
+    h1: "A propos"

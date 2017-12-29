@@ -6,9 +6,10 @@ gem 'middleman-livereload'
 
 gem 'middleman-minify-html'
 gem 'middleman-imageoptim', :git => 'https://github.com/plasticine/middleman-imageoptim'
-gem "middleman-critical", "~>0.0.2"
+gem 'middleman-critical', '~>0.0.2'
+gem 'middleman-transpath'
 
-gem "middleman-sitemap", :git => "https://github.com/bastienrobert/middleman-sitemap"
+gem 'middleman-sitemap', :git => 'https://github.com/bastienrobert/middleman-sitemap'
 gem 'middleman-robots', '1.3.0'
 
 gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
